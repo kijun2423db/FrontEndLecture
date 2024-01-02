@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleForm</title>
+</head>
+<body>
+    <form action ="Ex99_mainForm.html" method = "get">
+        <fieldset>
+            <legend>
+                회원가입
+            </legend>
+            <ol>
+                <li>이름 <input type="text" placeholder="이름" > </li>
+                <li>성별 <input type="radio" name="gender" id="male" checked>
+                    <label for = "male"> 남성 </label>
+                    <input type="radio" name="gender" id="female">
+                    <label for = "female"> 여성 </label> </li>
+                <li>직업 
+                    <select id="job" name="job">
+                        <option value="프로그래머">프로그래머</option>
+                        <option value="학생">학생</option>
+                        <option value="선생">선생</option>
+                    </select>
+                </li>
+                <li>
+                    취미
+                    <input type="checkbox" id="1" name="sleep" value="sleep" checked>
+                    <label for="1">잠자기</label>                
+                    <input type="checkbox" id="2" name="eat" value="eat">
+                    <label for="2">먹기</label>                
+                    <input type="checkbox" id="3" name="breath" value="breath">
+                    <label for="3">숨쉬기</label>                
+                    <input type="checkbox" id="4" name="nap" value="nap">
+                    <label for="4">멍떄리기</label>                
+                </li>
+                <li>
+                    애인
+                    <input type="radio" name="gender" id="1" >
+                    <label for = "1"> 있다 </label>
+                    <input type="radio" name="gender" id="2">
+                    <label for = "2"> 없다 </label>          
+                </li>
+                <li>
+                    <button onclick="navigateToOtherPage()">확인</button>
+                    <input type="reset" value="취소">
+                </li>
+                <li>
+                    <textarea id="message" name="message" cols="30" rows="5"></textarea>
+                </li>
+                <li>
+                    빈값
+                    <input type="text" name= "id" required>
+                </li>
+                <li>
+                    사이즈
+                    <input type="text" size =100>
+                </li>
+                <li>
+                    초기값
+                    <input type="text" name = "grade" value="초기값">
+                </li>
+                <li>
+                    초기값 변경x
+                    <input type="text" value="초기값" readonly>
+                </li>
+                <li>
+                    입력 한계
+                    <input type="text" maxlength="5">
+                </li>
+                <li>
+                    미사용
+                    <input type="text" disabled>
+                </li>
+            </ol>    
+        </fieldset>
+        
+    </form>
+    <script>
+        function navigateToOtherPage() {
+            var idValue = document.getElementById('id').value;
+            window.location.href = 'Ex99_mainForm.html';
+            
+  }
+    </script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kakaoLogo{
+            margin-top: 40px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #mainContainer{
+            width: 580px;
+            height: 100%;
+            margin: 40px auto 42px;
+            padding: 0 69px;
+            border: 1px solid rgba(0,0,0,.12);
+            font-size: 12px;
+            box-sizing: border-box
+        }
+        #email{
+            border : none;
+            border-bottom: 2px solid gray;
+            font-size : 20px;
+            margin-top:40px;
+            width: 100%;
+        }
+        #pw{
+            border : none;
+            border-bottom: 2px solid gray;
+            font-size : 20px;
+            margin-top:10px;
+            width: 100%;
+        }
+        #logIn:link{
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 50px;
+            border-radius: 4px;
+            color: black;
+            font-size: 20px;
+            text-align: center;
+            line-height: 51px;
+            background-color: yellow;
+            margin-top:50px;
+        }
+        #logIn:visited{
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 50px;
+            border-radius: 4px;
+            color: black;
+            font-size: 20px;
+            line-height: 51px;
+            background-color: yellow;
+            margin-top:50px;
+        }
+        #inner_fieldset{
+            border:none;
+            margin:auto;
+            margin-top: 30px;
+            border-top: 1px solid rgb(104, 104, 104);
+            width: 100%-10px;
+            text-align: center;
+            font-size: 15px;
+            color: gray;        
+        }
+        #QR_logIn:link{
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 50px;
+            border-radius: 4px;
+            color: black;
+            font-size: 20px;
+            text-align: center;
+            line-height: 51px;
+            background-color: gray;
+            margin-top:10px;
+        }
+        #QR_logIn:visited{
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 50px;
+            border-radius: 4px;
+            color: black;
+            font-size: 20px;
+            text-align: center;
+            line-height: 51px;
+            background-color: rgb(224, 224, 224);
+            margin-top:10px;
+        }
+
+        #sign_in:link{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:5px;
+            margin-bottom: 30px;
+        }
+        #sign_in:visited{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:5px;
+            margin-bottom: 30px;
+        }
+
+        #find_id:link{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:5px;
+            margin-left: 270px;
+            margin-bottom: 30px;
+        }
+        #find_id:visited{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:5px;
+            margin-left: 270px;
+            margin-bottom: 30px;
+        }
+        #find_pw:link{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:5px;
+            margin-left: 15px;
+            margin-bottom: 30px;
+        }
+        #find_pw:visited{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:5px;
+            margin-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        #footer{
+            width: 580px;
+            height: 100%;
+            margin: 40px auto 42px;
+            padding: 0 69px;
+            border: none;
+            font-size: 12px;
+            box-sizing: border-box
+        }
+        #footer1:link{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 30px;
+        }
+        #footer1:visited{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 30px;
+        }
+        #footer2:link{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #footer2:visited{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #footer3:link{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #footer3:visited{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #footer4:link{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #footer4:visited{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #footer5:link{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #footer5:visited{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #footer6:link{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #footer6:visited{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+            line-height: 51px;
+            background-color: white;
+            margin-top:30px;
+            margin-left: 15px;
+        }
+        #coryright{
+            margin-left: 80px;
+            margin-top: 1px;
+            border: none;
+            color: gray;
+            font-size: 11px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id = kakaoLogo> kakao </div>
+
+    <fieldset id="mainContainer">
+        <div id = "email_pw">
+            <input type = "text" id="email" placeholder="카카오메일 아이디, 이메일, 전화번호"><br>
+            <input type = "text" id="pw" placeholder="비밀번호"><br><br><br><br>
+        </div>
+        <a href="#" id = "logIn">로그인</a>
+        <fieldset id="inner_fieldset">
+            <legend>
+                또는
+            </legend>
+        </fieldset>
+        <a href="#" id = "QR_logIn">QR코드 로그인</a> 
+        
+        <a href="#" id = "sign_in">회원가입</a>
+        <a href="#" id = "find_id">계정 찾기</a>
+        <a href="#" id = "find_pw">비밀번호 찾기</a>
+    </fieldset>
+    <div id="footer">
+        <a href="#" id = "footer1">이용약관</a>
+        <a href="#" id = "footer2">개인정보 처리방침</a>
+        <a href="#" id = "footer3">운영정책</a>
+        <a href="#" id = "footer4">고객센터</a>
+        <a href="#" id = "footer5">공지사항</a>
+        <a href="#" id = "footer6">한국어 ^</a>
+        <h6 id = "coryright">Copyright ⓒ Kakao Corp. All rights reserved</h6>
+    </div>
+
+
+</body>
+</html>

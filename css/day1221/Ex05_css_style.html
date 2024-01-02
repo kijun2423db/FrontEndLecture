@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex05_css_style</title>
+    <style>
+        div{
+            color : red;
+        }
+        .color1{
+            color : rgb(0,0,255);
+        }
+        .color2{
+            /* R G B를 255 255 255로 둿을때 16진법으로 표현 */
+            color : #00ff00;
+        }
+        .color3{
+            background-color: lightblue;
+        }
+        .color4{
+            background-image: url(test.jpeg);
+            height: 300px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .color5{
+            /* 
+                ltr : left to right
+                rtl : right to left 
+                왼쪽에서 오른쪽갈꺼냐 오른쪽에서 왼쪽 갈꺼냐 ㅇㅇ 
+                rtl했으니까 오른쪽에서 출력됨 ㅇㅇ
+            */
+            direction: rtl;
+
+            /* 글자 사이 간격 */
+            letter-spacing: 10px; 
+            /* 단어 사이 간격 */
+            word-spacing: 20px;
+        }
+
+        .color6{
+            /* 문자 들여쓰기 */
+            text-indent: 30px;
+            /* 문자 정렬 */
+            /* direction이랑 싸우면 text align 이 이김 */
+            text-align: center;
+            direction: rtl;
+            /* 글자 그림자 주기 위치, 색 지정 ㅇㅇ*/
+            text-shadow: 3px 2px lightcoral;
+        }
+        .color7{
+            text-decoration: line-through;
+        }
+        a{
+            /* a태그임에도 밑줄을 사라지게 할 수있음 */
+            text-decoration: none;
+            color : rgb(0,0,0)
+        }
+
+
+        p{
+            /* 글꼴 설정 */
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #font1{
+            font-family: Gungsuh;
+            font-style: italic;
+            font-variant: small-caps;
+        }
+        #font2{
+            font-weight: bolder; /* 두껍게 ㅇㅇ */
+            font-size : 200%;
+            /* 
+                px 스크린의 픽셀단위 ㅇㅇ 200px이면 글자하나에 200px을 쓴다는 의미
+                절대적크기, 기본 16px을 씀 ㅇㅇ
+                em : 글꼴의 대문자 M의 크기를 기준, 상대적크기 (M이 글자중에 가장 크고 뚱뚱해서 ㅇㅇ) em을 젤 많이 씀 ㅇㅇ
+                % : 기본글꼴크기를 기준으로 함 ㅇㅇ (16px을 기준으로 함 ㅇㅇ)
+            */
+        }
+
+        #font3{
+            font-size: 32px;
+        }
+
+        #font4{
+            font-size: 2em; /*얘는 대문자 M기준이기때문에 살짝 다름 200%보단 쪼꼼 다름 ㅇㅇ*/
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="color1"> 색상 테스트1 </div>
+    <div class="color2"> 색상 테스트2 </div>
+    <div class="color3"> 색상 테스트3 </div>
+    <div class="color4"> 색상 테스트4 </div>
+    <div class="color5"> 색상 테스트5 </div>
+    <div class="color6"> 색상 테스트6 </div>
+    <div class="color7"> 색상 테스트7 </div>
+
+    <hr>
+
+    <a href="#">이곳은 링크를 위한 태그입니다.</a>
+    <div>Font Testing...! 폰트테스트</div>
+    <p id="font1">Font Testing...! 폰트테스트1 </p>
+    <p id="font2">Font Testing...! 폰트테스트2 </p>
+    <p id="font3">Font Testing...! 폰트테스트3 </p>
+    <p id="font4">Font Testing...! 폰트테스트4 </p>
+    <p id="font5">Font Testing...! 폰트테스트5 </p>
+</body>
+</html>

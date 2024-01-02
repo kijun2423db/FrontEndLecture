@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+
+        a#blue{
+            background-color: rgb(0,136,254);
+            color : white;
+            /* 
+                width: 150px;
+                height: 50px;
+                a태그라서 inline이라 크기 변화가 안됨 ㅇㅇ
+             */
+            padding:10px 25px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+        }
+        a#dark{
+            background-color: rgb(73,78,86);
+            color : white;
+            /* 
+                width: 150px;
+                height: 50px;
+                a태그라서 inline이라 크기 변화가 안됨 ㅇㅇ
+             */
+            padding:10px 25px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            
+        }
+
+
+        /* 
+            a 태그의 link 는 5가지의 상태가있음 ㅇㅇ
+
+            1. :link : 한번도 접속하지 않은상태
+            2. :visited : 한번이라도 링크를 방문한 상태
+            3. :hover : 마우스가 링크위에 있는 상태
+            4. :active : 마우스가 링크를 클릭하고 있는 상태 (꾹누르고있는상태? ㅇㅇ)
+            5. :focus : 키보드나 마우스가 이벤트 또는 다른 형태로 태그의 포커스가 되고있을경우
+        */
+        /* 태그의 상태를 선택할때 ':'을 사용  */
+        a#test:link{
+            color : olive;
+        }
+        a#test:visited{
+            color : brown;
+        }
+        a#test:hover{
+            color : coral;
+            text-decoration: underline;
+            font-size: 50px;
+            text-shadow: 5px 5px black;
+        }
+
+        @keyframes rotateAndScale {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(180deg) scale(1.5);
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        a#test:active{
+            color : khaki;
+            text-decoration: overline;
+            background-image: url(test.jpeg);
+            
+        }
+
+        a#exam:hover{
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            display: inline-block;
+            animation: rotateAndScale 2s infinite;
+
+        }
+
+       a#exam:link{
+            background-color: rgb(0,136,254);
+            color : white;
+            padding:10px 25px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            animation: rotateAndScale 2s infinite;
+
+       } 
+       a#exam:visited{
+            background-color: rgb(0,136,254);
+            color : white;
+            padding:10px 25px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            border-radius: 10px;
+       } 
+       a#exam:hover{
+            background-color: rgb(73,78,86);
+            color : white;
+            padding:10px 25px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            border-radius: 10px;
+       }
+
+        a#exam:active{
+            background-color: rgb(73,78,86);
+            color : white;
+            padding:10px 25px;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            border-radius: 10px;
+       }
+       
+
+    </style>
+</head>
+<body>
+    <a id="normal" href="#"> 링크 버튼 1 </a><br><br>
+    <a id="blue" href="#"> 링크 버튼 2 </a><br><br>
+    <a id="dark" href="#"> 링크 버튼 3 </a><br>
+    <br><br>
+    <a id="test" href="#2"> 버튼 연습 </a> 
+    <br><br><br>
+    <a id="exam" href="#3"> 링크 버튼 </a>
+</body>
+</html>

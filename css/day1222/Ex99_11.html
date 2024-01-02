@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            border: 1px solid rgba(128, 128, 128, 0.15);
+            width: 600px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #footer {
+            width: 500px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        #top {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #middle {
+            /* border: 1px solid gray; */
+            margin-bottom: 10px;
+            padding: 30px 20px;
+        }
+
+        #inputDiv {
+            width: 400px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        .inputTag {
+            width: 400px;
+            padding: 10px;
+            height: 50px;
+            font-size: large;
+            border-radius: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.15);
+        }
+        .inputTag:focus{
+            border: 2px solid red;
+            outline: none;
+            caret-color: red;
+        }        
+
+        #btnDiv {
+            width: 400px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        #loginBtn {
+            background-color: red;
+            width: 400px;
+            padding: 20px;
+            font-size: large;
+            color: white;
+            border: 0px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        #checkBoxDiv {
+            width: 400px;
+            margin: auto;
+        }
+        #checkBox{
+            appearance: none; /* 기본 스타일 제거 */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            width: 20px; /* 동그라미 크기 조절 */
+            height: 20px;
+            border: 2px solid #000; /* 동그라미 테두리 스타일 */
+            border-radius: 100%; /* 동그라미 모양 */
+            outline: none;
+            cursor: pointer;
+            vertical-align: middle;
+            color:black;
+            background-color: #ffffff;
+            border: 2px solid #000000; 
+        }
+
+        #inner_fieldset {
+            border: none;
+            margin: auto;
+            margin-top: 30px;
+            border-top: 1px solid rgb(104, 104, 104);
+            width: 370px;
+            text-align: center;
+            font-size: 15px;
+            color: gray;
+        }
+
+        #logoDiv {
+            width: 400px;
+            margin: auto;
+        }
+
+        #logoDiv a {
+            text-decoration: none;
+        }
+
+        #logoDiv a+a {
+            margin-left: 8px;
+            /* 이미지 간격 조절 */
+        }
+
+        .footerTag:link, .footerTag:visited {
+            text-decoration: none;
+            color: black;
+
+            margin-left: 30px;
+        }
+
+        #bannerDiv {
+            width: 600px;
+            margin: auto;
+        }
+        #bannerImg{
+            width: 600px;
+            margin: auto;
+        }
+        #coryright{
+            width: 600px;
+            margin-left: 120px;
+            margin-top: 10px;
+            color: gray;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="top">
+            <a href="img/KakaoTalk_Photo_2023-12-22-10-40-15.png">
+                <img src="img/KakaoTalk_Photo_2023-12-22-10-40-15.png" alt="No Image">
+            </a>
+        </div>
+        <div id="middle">
+            <div id="inputDiv">
+                <input type="text" class="inputTag" placeholder="아이디 입력">
+                <br>
+                <input type="text" class="inputTag" placeholder="비밀번호 8자~20자">
+            </div>
+            <div id="btnDiv">
+                <button type="button" id="loginBtn">로그인</button>
+            </div>
+            <div id="checkBoxDiv">
+                <input type="checkbox" id="checkBox" >
+                <label for="checkBox" >로그인 상태 유지</label><br>
+            </div>
+            <fieldset id="inner_fieldset">
+                <legend>
+                    또는 SNS 아이디로 로그인
+                </legend>
+            </fieldset>
+            <div id="logoDiv">
+                <a href="img/sns-kakao.svg">
+                    <img src="img/sns-kakao.svg" alt="No Image">
+                </a>
+                <a href="img/sns-naver.svg">
+                    <img src="img/sns-naver.svg" alt="No Image">
+                </a>
+                <a href="img/sns-tid.svg">
+                    <img src="img/sns-tid.svg" alt="No Image">
+                </a>
+                <a href="img/sns-apple.svg">
+                    <img src="img/sns-apple.svg" alt="No Image">
+                </a>
+                <a href="img/sns-payco.svg">
+                    <img src="img/sns-payco.svg" alt="No Image">
+                </a>
+                <a href="img/sns-facebook.svg">
+                    <img src="img/sns-facebook.svg" alt="No Image">
+                </a>
+                <a href="img/sns-phone.svg">
+                    <img src="img/sns-phone.svg" alt="No Image">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="bottom">
+            <a href="#" class="footerTag">아이디찾기</a>
+            <a href="#" class="footerTag">비밀번호찾기</a>
+            <a href="#" class="footerTag">비회원 주문조회</a>
+            <a href="#" class="footerTag">회원가입</a>
+        </div>
+    </div>
+    <div id="bannerDiv">
+        <a href="img/banner.png" id="banner">
+            <img src="img/banner.png" id = "bannerImg" alt="No Image">
+        <a href="#" id = "coryright">Copyright © 2019 11Street Co.,Ltd. All Rights Reserved.</h6>
+        </a>
+    </div>
+</body>
+
+</html>

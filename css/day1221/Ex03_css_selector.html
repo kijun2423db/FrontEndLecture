@@ -1,0 +1,149 @@
+<!-- 
+    태그를 선택하는 방법 4가지 
+    선택자 {스타일 속성 : 스타일 속성 값}
+    1. 태그 선택자
+        태그이름을 이용한 선택자, 선택의 범위가 가장 큼
+        HTML 문서상의 모든 태그를 선택하는 방법
+
+    * 태그이름 {속성 : 속성값}
+    h1 {color : red} : 모든 h1 태그의 색상을 빨간색으로 변경
+
+
+    html 태그의 속성 id / class dldyd
+    <태그이름 id = "아이디1" class = "클래스">
+    <태그이름 id = "아이디2" class = "클래스">
+
+    id = 태그의 선택을 돕는 속성, 중복된 아이디명으로 부여 가능 (앵간하면 중복 안하는게 좋음 ㅇㅇ)
+     -> css, js에서 선택할떄 중복이 되면 작성된 아이디로 인해 문제 발생 가능.
+     -> js 에서 거의 무조건 문제가 생기니까 id는 중복 안하는걸로 해야함 ㅇㅇ
+
+    class = 태그의 선택을 돕는 속성, 중복된 클래스명으로 부여 가능
+        + 띄어쓰기로 여러개의 클래스명 부여 함
+        > 태그를 우리가 원하는대로 그룹화 하기 위해 사용하는 속성
+    
+        2. id 선택자
+        태그 내의 id 속성을 이용한 선택자, 선택의 범위가 가장 작음
+        id선택자를 의미하는 키워드 : #
+        
+    #아이디1 { 속성 : 속성값}
+    #id {color : red}
+
+
+    3. class 선택자
+        태그내의 class 속성을 이용한 선택자, 선택의 범위가 자유로움
+        class 선택자를 의미하는 키워드 : .
+    .클래스 {속성 : 속성값 }
+    .class { color : red} ㅇㅇ
+
+    4. 그룹 선택자
+        선택자들을 동등하게 연결해주는 선택자
+        키워드 : ,
+    h1, #id, .class {
+        color : red
+    }
+    >> h1, id=id, class="class"인 모든 태그들을 선택해서 빨강으로 바꾸는거 ㅇㅇ
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex03_css_selector</title>
+    <style>
+        div{
+            color : red;
+        }
+        #point10{
+            color : aqua;
+        }
+        .point3 {
+            color : blue;
+        }
+        
+        div, #point2, .point3{
+            background-color : blueviolet;
+        }
+
+        .a0 {
+            font-size : 50px;
+        }
+
+    /* style내의 우선순위 존재 */
+    /* 
+    1. 같은 속성자 끼리 속성 비유를 할경우
+     -> 하단에 작성한 속성값으로 적용 됨 ㅇㅇ
+    */
+
+    div{
+        color : black;
+    }
+    div{
+        color : yellow;
+    }
+    /*  
+    2. 태그(요소) 선택자와 id 선택자일 경우
+     -> id 선택자로 선택한 속성이 적용됨 ㅇㅇ
+    */
+    #point1{
+        color : red;
+    }
+    /* 
+    3. 태그(요소)선택자와 class 선택자일 경우
+     -> class 선택자로 선택한 속성이 적용됨 ㅇㅇ
+    */
+
+    .class{
+        color : blue;
+    }
+    div {
+        color : aqua;
+    }
+
+    /*
+    4. id 선택자와 class 선택자일 경우
+       -> id선택자로 선택한 속성이 적용됨 ㅇㅇ
+    */
+
+    #point1{
+        color : red;
+    }
+    .class1{
+        color : blue;
+    }
+
+    /* 
+    태그(요소선택자) < class 선택자 < id 선택자 이런느낌인듯 ㅇㅇㅇ
+    */
+
+    /* 태그이름 #id속성명 {} */
+    /* 태그이름.클래스속성명 {} */
+    /* 태그이름#id속성명.클래스속성명 {} */
+    /* 태그이름.클래스속성명.클래스속성명 {} */
+    p.point3{
+        /* p태그중에 class가 point3인애들 ㅇㅇ */
+        color :red;
+    }
+    </style>
+</head>
+<body>
+    <div id="id1" class="class1" style="color: brown;"> 안녕하세요 </div>
+    <div id="point1"> 안녕하세요 </div>
+    <div id="point10"> 안녕하세요 </div>
+    <div id="point100"> 안녕하세요 </div>
+    
+    <p> 안녕하세요 </p>
+    <p id="point2"> 안녕하세요 </p>
+    <p id="point20"> 안녕하세요 </p>
+    <p id="point200"> 안녕하세요 </p>
+
+    <p> 안녕하세요2 </p>
+    <p class="point3"> 안녕하세요2 </p>
+    <p class="point3"> 안녕하세요2 </p>
+    <p class="point3 a0"> 안녕하세요2 </p> 
+    <div class="point3"> 안녕하세요2 </p> 
+
+    <!-- class를 point3이면서 a0도 되는거임 ㅇㅇ 두개의 class명을 가짐 -->
+</body>
+</html>

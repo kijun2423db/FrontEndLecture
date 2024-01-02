@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainForm</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            로그인 정보
+        </legend>
+        <ol>
+            <li>
+                아이디
+                <input type="text" id="idInput">
+                <script>
+                    var urlParam = new URL(location.href).searchParams;
+                    var idValue = urlParam.get('id');
+                    document.getElementById('idInput').value = idValue;
+                </script>
+            </li>
+            <li>
+                <label for="password">비밀번호:</label>
+                <input type="password" id="password" name="password" oninput="checkPassword()" required>
+            </li>
+            <li>
+                <label for="confirmPassword">비밀번호 확인:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" oninput="checkPassword()" required>
+                <div id="passwordMatchMessage"></div>
+            </li>
+
+            <li>
+                회원 등급
+                <input type="text" id="grade">
+                <script>
+                    var urlParam = new URL(location.href).searchParams;
+                    var gradeValue = urlParam.get('grade');
+                    document.getElementById('grade').value = gradeValue;
+                </script>
+            </li>
+        </ol>
+    </fieldset>
+
+    <form id="myform">
+        <fieldset>
+            <legend>
+                개인 정보
+            </legend>
+            <ol>
+                <li>
+                    <label for="koreanInput">이름</label>
+                    <input type="text" id="koreanInput" name="koreanInput" value="한글">
+                </li>
+                <li>
+                    <label for="email">메일 주소</label>
+                    <input type="email" id="email" name="email">
+                </li>
+                <li>
+                    <label for="phone">연락처</label>
+                    <input type="text" id="phone" name="phone" pattern="(010)-\d{3,4}-\d{4}">
+                </li>
+                <li>
+                    <label for="date">생일</label>
+                    <input type="date" id="date" name="date">
+                </li>
+            </ol>
+        </fieldset>
+    </form>
+    <fieldset>
+        <legend>
+            코딩 숙련도
+        </legend>
+        <ol>
+            <li>
+                <label for="range"></label>
+                <input type="range" id="range" name="range" min="0" max="8" step="2" value="6" list="rangeValues">
+                <datalist id="rangeValues">
+                    <option value="2">하</option>
+                    <option value="4">중</option>
+                    <option value="6">상</option>
+                </datalist>
+            </li>
+        </ol>
+    </fieldset>
+    <button type="submit" form="myform">제출</button>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var message = document.getElementById('passwordMatchMessage');
+
+            if (password === confirmPassword) {
+                message.innerHTML = '비밀번호가 일치합니다.';
+            } else {
+                message.innerHTML = '비밀번호가 일치하지 않습니다.';
+            }
+        }
+
+        document.querySelector("#myform").addEventListener("submit", function (e) {
+            var koreanInput = document.querySelector("#koreanInput");
+            var regexp = /^[가-힣]+$/;
+
+            if (!regexp.test(koreanInput.value)) {
+                alert("이름에는 한글만 입력하세요.");
+                e.preventDefault(); // 폼 전송 막기
+            }
+        });
+    </script>
+</body>
+
+</html>

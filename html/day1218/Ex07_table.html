@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex07_table.html</title>
+</head>
+<body>
+    <!--
+        <table></table> : 테이블을 구성하기위한 가장 큰 범위 태그
+        <tr></tr> : 가로줄을 만드는 태그 ()
+        <td></td> : 셀(칸)을 만드는 태그 ()
+    
+        * <th></th> : 표의 제목을 만드는 태그 (* td 대신 사용함)
+        * td : 기본값 : 보통글씨, 왼쪽 정렬
+        * th : 기본값 : 굵은글씨, 가운데 정렬
+        * thead, tbody는 나중에 ㄱㄱ
+    -->
+
+    <table border="1"> <!-- 테이블의 윤곽선 두께 1 ㅇㅇ-->
+        <tr>
+            <th>11111</th>
+            <th>22222</th>
+        </tr>
+        <tr>
+            <td>33333333</td>
+            <td>44444444</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table border="1">
+        <tr>
+            <th>언어</th>
+            <th>난이도</th>
+            <th>학습기간</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>하</td>
+            <td>1주</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>중</td>
+            <td>1주</td>
+        </tr>
+        <tr>
+            <td>javascript</td>
+            <td>상</td>
+            <td>2주</td>
+        </tr>
+    </table>
+
+    <hr>
+    <!-- 
+        테이블 병합
+        colspan : 열합치기
+        rowspan : 행합치기
+    -->
+    <table border="1">
+        <tr>
+            <td colspan="2" style="text-align: center;">1</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <td rowspan="2" style="text-align: center;">1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>4</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

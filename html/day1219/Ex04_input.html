@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04_input</title>
+</head>
+
+<body>
+    <!-- 
+        input : 값을 입력받을수 있게 도와주는 태그 (빈 태그)
+        입력의 종류가 많기때문에 type 속성이 필수로 들어감
+        type = "text"가 기본값임
+     -->
+    이름 : <input /> <br>
+    별명 : <input type="text" /> <br>
+    비밀번호 : <input type="password" /> <br>
+    <hr>
+
+
+    <!-- 
+        checkbox : 다중 항목 다중 선택 (동의서 등)
+        radio : 다중 항목 단일 선택 (성별, mbti 등)
+      -->
+    <input type="checkbox" /> <input type="radio" /> <br>
+    <hr>
+
+    성별 : <input type="radio"> 남성
+    <input type="radio"> 여성
+
+    <!-- 
+          name 속성 : radio 타입에서 같은 그룹임을 표시하는 속성 ㅇㅇㅇ 같은 그룹으로 묶으면 하나만 선택 ㄱㄴ
+        -->
+    <br>
+    성별 : <input type="radio" name="gender"> 남성
+    <input type="radio" name="gender"> 여성
+
+    <br>
+    <br>
+
+    체크 : <input type="checkbox" name="chk"> 체크1
+    <input type="checkbox" name="chk"> 체크2
+
+
+    <!-- 
+        label 태그 : input과 문자를 연결해주는 태그
+        input 태그의 id 속성값과 label태그의 for 속성값이 동일하면 연결됨
+
+        *연결방법
+        <input id = ""/>
+        <label for = ""> 내용 </label>
+
+        *id 속성값은 태그별로 유일한 값으로 작성하는 것을 권장함
+        *label태그의 내용을 누르면(선택하면) input태그가 선택된것처럼 행동함
+     -->
+
+    <br>
+    <hr>
+
+    성별 : <input type="radio" name="gender" id="male">
+    <label for = "male"> 남성 </label>
+    <input type="radio" name="gender" id="female">
+    <label for = "female"> 여성 </label>
+    <br>
+    <hr>
+
+    <input type = "color"> <br>
+    날짜 : <input type = "date" value="2023-12-19"
+        min = "2023-12-18"
+        max = "2023-12-31"> <br>
+    범위 : <input type = "range" min="0", max="10" value="2"> <br>
+    숫자 : <input type = "number" step = "10" min="10",max ="100"><br>
+    힌트 : <input type = "text" placeholder="아이디 입력"> <br>
+    오토 포커스 : <input type="text" autofocus> <br> 
+    <!-- autofocus옵션을 주면 페이지 드갈때 커서가 젤처음 여기에 먼저뜸 -->
+    <br>
+    <input type = "checkbox" checked> <input type = "radio"> <br>
+    <input type = "checkbox" > <input type = "radio" checked> <br>
+    <!-- autofocus 처럼 checked 옵션을 주면 체크박스나 라디오박스에서 미리 디폴트값 정의 ㄱㄴ -->
+
+    정규식 (핸드폰)* <input type="text" pattern="(010|011)-\d{3,4}-\d{4}"><br>
+    <!-- 정규식은 지금은 기능구현이 되지않은 상태 ㅇㅇ -->
+
+    <button> 버튼1 </button>
+    <input type="button" value = "버튼2">
+    <!-- 같은기능을함 ㅇㅇ -->
+
+</body>
+
+</html>

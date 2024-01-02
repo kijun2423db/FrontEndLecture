@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kakaoLogo{
+            text-align: center;
+            font-size: 30px;
+        }
+        #mainBox{
+            border-style: 2px solid gray;;
+            width: 650px;
+            height: 1200px;
+            margin:auto;
+            text-align: center;
+        }
+        #email{
+            border: none;
+            border-bottom: 2px solid gray;
+            margin: auto;
+            margin-top: 40px;
+            font-size: 20px;
+            width: 300px;
+            
+        }
+        #password{
+            border: none;
+            border-bottom: 2px solid gray;
+            margin: auto;
+            margin-top: 10px;
+            font-size: 20px;
+            width: 300px;
+        }
+        a#login:link{
+            text-decoration: none;
+            background-color: rgb(255,255,0);
+            color : black;
+            padding:12px 125px;
+            width: 300px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 10px;
+       } 
+        a#login2:link{
+            text-decoration: none;
+            background-color: rgb(238, 238, 238);
+            color : black;
+            margin-top:20px;
+            padding:12px 88px;
+            width: 300px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 10px;
+       } 
+        #inner_fieldset{
+            border:none;
+            margin:auto;
+            margin-top: 30px;
+            border-top: 1px solid rgb(104, 104, 104);
+            width: 270px;
+            text-align: center;
+            color: gray;
+        }
+        #sign_up{
+            order:-1;
+        }
+        #find_account{
+            display: block;
+            text-align: right;
+            margin-right: 160px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: rgb(62, 62, 62);
+        }
+        #bottom_div{
+        display: flex;
+        justify-content: space-between;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id = kakaoLogo> kakao </div>
+    <div id = mainBox>
+        <fieldset id="mainContent">
+            <input type="text" id="email" placeholder="카카오메일 아이디, 이메일,전화번호">
+            <label for="email"></label><br>
+            <input type="text" id="password" placeholder="비밀번호">
+            <label for="password"></label>
+
+            <br><br><br><br>
+            <a id="login" href="#"> 로그인 </a> 
+
+            <fieldset id="inner_fieldset">
+                <legend id="or_legend">
+                    또는
+                </legend>
+            </fieldset>
+            <a id="login2" href="#"> QR코드 로그인 </a> 
+            <br>
+            <div id="bottom_div">
+                <a id ="sign_up" href="#">
+                    회원가입
+                </a>
+                <a id="find_account" href="#">계정찾기</a>
+                <a id="find_pw" href="#">비밀번호 찾기</a>
+            </div>
+
+        </fieldset>
+    </div>
+    
+</body>
+</html>

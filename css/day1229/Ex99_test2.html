@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1200px;
+        }
+        h1{
+            margin-top: 0;
+        }
+        .menuBar{
+            width: 800px;
+            height: 100px;
+            background-color: rgb(208, 208, 208);   
+            position: relative;         
+        }
+        .menu{
+            margin-left: 70px;
+            margin-top: 20px;
+            position:absolute;
+        }
+        .main{
+            width: 800px;
+            float: left;
+            border: 1px dotted black;
+            border-radius: 10px;
+            position: relative;
+        }
+        .menuItem img{
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+        .menuItem p {
+            margin: auto;
+            display: inline;
+        }
+
+        .menuItems{
+            width: 230px;
+            height: 150px;
+            margin-right: 20px;
+            float:inline-start;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class = "main">
+            <div class = "menuBar">
+                <h1 class = "menu">M E N U</h1>
+            </div>
+            <div class = "menuItem">
+                <div id = "presso" class = menuItems>
+                    <img src="presso.jpeg" alt="에스프레소" width="230px" height="150px" style="margin-left: 20px;">
+                    <p>에스프레소 1000원</p>
+                </div>
+                <div id = "americano" class = menuItems>
+                    <img src="americano.jpeg" alt="아메리카노" width="230px" height="150px">
+                </div>
+                <div id = "latte" class = menuItems>
+                    <img src="latte.jpeg" alt="라떼" width="230px" height="150px">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
