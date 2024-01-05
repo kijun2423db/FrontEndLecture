@@ -16,7 +16,9 @@
                     arr.push(i);
                 }
             }
-            document.write(arr);
+            // document.write(arr);
+            let resultTag = document.getElementById('result');
+            resultTag.innerHTML = `${num1}, ${num2}의 공약수는 ${arr}`;
         }
     </script>
 </head>
