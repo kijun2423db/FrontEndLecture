@@ -10,7 +10,7 @@ let age;
 
 if(myMonth > month){
     age = year - myYear -1;
-}else if(inputMonth < month){
+}else if(myMonth < month){
     age = year - myYear;
 }else{
     if(myDate < date){
