@@ -13,6 +13,7 @@ console.log(today.substring(today.indexOf('T')+1,today.length-5));
 console.log(today.substring(today.indexOf('T')+1,today.indexOf('.')));
 console.log(new Date().toLocaleString()); //-> 정규화해서 출력됨 ㅇㅇㅇ
 
+console.log("11111212131313131313");
 //YYYY-MM-DD hh:mm:ss 형식
 function twoDigit(num){
     return (num <10)? '0'+num : String(num);
