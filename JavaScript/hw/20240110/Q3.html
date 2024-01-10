@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            const btn = document.getElementById('btn');
+            btn.onclick = function () {
+                let txt = document.getElementById('inputTxt').value;
+                let txt1 = txt.split(";");
+                let resultSpan = document.getElementById('result');
+                let arr = []
+                for (word of txt1) {
+                    arr.push(parseInt(word));
+                }
+                arr = arr.sort(function (a, b) {
+                    return b - a;
+                });
+                resultSpan.innerHTML = arr.join(', ');
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="inputTxt">
+    <button id="btn">실행</button>
+    <span id="result"></span>
+</body>
+
+</html>

@@ -13,5 +13,8 @@ for(let i = 100; i<1000;i++){
         }
     }
 }
-let anw = arr.pop();
+arr.sort(function(a, b) {
+    return a.multipleNum - b.multipleNum;
+});
+anw = arr.pop();
 console.log(`가장큰 Palindrome 수는 ${anw.num1} 와 ${anw.num2}를 곱한값인 ${anw.multipleNum} 입니다.`);
