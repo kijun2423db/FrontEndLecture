@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap 5 Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid p-3 bg-primary text-white text-center">
+        <h1>부트스트랩 이미지</h1>
+        <p>이미지</p>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <!-- 네모인디 모서리가 둥근거 -->
+                <h2>Rounded Corners</h2>
+                <p>The .rounded class adds rounded corners to an image:</p>
+                <img src="https://picsum.photos/304/236?q=1" class="rounded" alt="no img">
+            </div>
+            <div class="col">
+                <!-- 동그란 이미지 -->
+                <h2>Circle</h2>
+                <p>The .rounded-circle class shapes the image to a circle:</p>
+                <img src="https://picsum.photos/304/236?q=2" class="rounded-circle" alt="no img">
+            </div>
+            <div class="col">
+                <!-- 네몬데 뭔가 액자같은 이미지 ㅇㅇ -->
+                <h2>Thumbnail</h2>
+                <p>The .img-thumbnail class creates a thumbnail of the image:</p>
+                <img src="https://picsum.photos/304/236?q=3" class="img-thumbnail" alt="no img">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <h2>Aligning images</h2>
+        <p>Use the float classes to float the image to the left or to the right:</p>
+        <div class="row">
+            <div class="col">
+                <img src="https://picsum.photos/304/236?q=4" class="float-start">
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/304/236?q=4" class="float-end">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <h2>Centered Image</h2>
+        <p>Center an image by adding the utility classes .mx-auto (margin:auto) and .d-block (display:block) to the
+            image:</p>
+        <img src="https://picsum.photos/304/236?q=5" class="mx-auto d-block" style="width:50%">
+    </div>
+
+</body>
+
+</html>
